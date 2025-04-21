@@ -7,12 +7,22 @@ const DoctorDetails = () => {
   const data = useLoaderData();
   const { name } = useParams();
   const singleData = data.find((doctor) => doctor.name === name);
-  
+
   const today = new Date();
   const day = today.getDay();
-  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const todayName = days[day];
-  const isAvailable = singleData.availableDays.find((available)=>available===todayName);
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const todayName = days[day];
+  const isAvailable = singleData.availableDays.find(
+    (available) => available === todayName
+  );
 
   return (
     <div className="pb-8">
@@ -42,7 +52,8 @@ const todayName = days[day];
               {singleData.workingAt}
             </span>
           </h2>
-          <h2 className="text-gray-500 border-b-2 border-dashed border-gray-300 py-1.5 mb-4 flex items-center gap-2"><FaRegRegistered />
+          <h2 className="text-gray-500 border-b-2 border-dashed border-gray-300 py-1.5 mb-4 flex items-center gap-2">
+            <FaRegRegistered />
             Reg No: {singleData.registrationNumber}
           </h2>
           <h3 className="mb-3">
@@ -64,14 +75,38 @@ const todayName = days[day];
         </div>
       </div>
       <div className="md:mb-5 mb-2 bg-white rounded-3xl py-3 px-2 md:py-8 md:px-6">
-        <h1 className="text-center font-bold text-2xl border-b-2 border-gray-100 pb-3">Book an Appointment</h1>
+        <h1 className="text-center font-bold text-2xl border-b-2 border-gray-100 pb-3">
+          Book an Appointment
+        </h1>
         <div className="flex justify-between w-full py-5 border-b-2 border-dashed border-gray-200 mb-5">
           <h2 className="font-bold">Availability</h2>
-          <h2 className="text-green-500 text-xs border rounded-full py-1 px-2 bg-green-50">{isAvailable?"Doctor Available Today": "Doctor Not Available"}</h2>
+          <h2
+            className={`${
+              isAvailable
+                ? "text-green-500 bg-green-50"
+                : "text-red-500 bg-red-50"
+            } text-xs border rounded-full py-1 px-2 `}
+          >
+            {isAvailable ? "Doctor Available Today" : "Doctor Not Available"}
+          </h2>
         </div>
         <div className="text-center">
-        <p className="text-orange-400 text-base border rounded-full py-1 px-2 bg-orange-50 cursor-pointer flex items-center gap-3"><CiSquareInfo className="rounded-full" />Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</p>
-        <button className="py-2 rounded-full bg-blue-400 hover:bg-blue-500 text-white text-center text-lg w-full cursor-pointer mt-12">Book Appointment Now</button>
+          <p className="text-orange-400 text-base border rounded-full py-1 px-2 bg-orange-50 cursor-pointer flex items-center gap-3">
+            <CiSquareInfo className="rounded-full" />
+            Due to high patient volume, we are currently accepting appointments
+            for today only. We appreciate your understanding and cooperation.
+          </p>
+          <button
+            disabled={!isAvailable}
+            className={`py-2 rounded-full text-white text-center text-lg w-full mt-12 
+    ${
+      !isAvailable
+        ? "bg-gray-200 cursor-not-allowed"
+        : "bg-blue-500 hover:bg-blue-400 cursor-pointer"
+    }`}
+          >
+            Book Appointment Now
+          </button>
         </div>
       </div>
     </div>
