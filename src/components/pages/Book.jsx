@@ -1,12 +1,15 @@
 import React, { useContext } from "react";
 import { BookingContext } from "../../context/BookingContext";
+import { toast } from "react-toastify";
 
 const Book = ({ book }) => {
   const { name, education, consultationFee, id } = book;
   const { booking, setBooking } = useContext(BookingContext);
   const handleCancelBooking = (id) => {
+    toast.error(`${name} Appointment Cancelled!!`);
     const result = booking.filter((bk) => bk.id !== id);
     setBooking(result);
+    
   };
   return (
     <div className="bg-white rounded-2xl py-4 px-5 mt-5">

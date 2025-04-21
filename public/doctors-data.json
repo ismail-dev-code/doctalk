@@ -8,7 +8,7 @@
     "experience": "22 years",
     "registrationNumber": "BMDC-101234",
     "workingAt": "Medilife Hospital",
-    "consultationFee": "1,100",
+    "consultationFee": "1100",
     "availableDays": ["Sunday", "Tuesday", "Thursday"]
   },
   {
@@ -32,7 +32,7 @@
     "experience": "25 years",
     "registrationNumber": "BMDC-103456",
     "workingAt": "Heart Beat Clinic",
-    "consultationFee": "1,200",
+    "consultationFee": "1200",
     "availableDays": ["Sunday", "Wednesday"]
   },
   {
@@ -116,7 +116,7 @@
     "experience": "6 years",
     "registrationNumber": "BMDC-110123",
     "workingAt": "RayView Hospital",
-    "consultationFee": "850",
+    "consultationFee": "1850",
     "availableDays": ["Monday", "Friday"]
   },
   {
@@ -128,7 +128,7 @@
     "experience": "23 years",
     "registrationNumber": "BMDC-111234",
     "workingAt": "UroLife Hospital",
-    "consultationFee": "1,200",
+    "consultationFee": "1200",
     "availableDays": ["Sunday", "Wednesday", "Friday"]
   },
   {
@@ -140,7 +140,7 @@
     "experience": "10 years",
     "registrationNumber": "BMDC-112345",
     "workingAt": "Vision Care Hospital",
-    "consultationFee": "1,300",
+    "consultationFee": "1300",
     "availableDays": ["Tuesday", "Thursday"]
   }
 ]

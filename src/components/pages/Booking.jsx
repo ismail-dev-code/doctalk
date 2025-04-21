@@ -2,17 +2,19 @@ import React, { useContext } from "react";
 import { BookingContext } from "../../context/BookingContext";
 import Book from "./Book";
 import { Link } from "react-router";
+import AppointmentChart from "../chart/Rechart";
 
 const Booking = () => {
   const { booking } = useContext(BookingContext);
 
   return (
     <div className="pb-10">
+      {booking.length !== 0 ? <div className="rounded-lg shadow-lg bg-white py-10 ">
+        <AppointmentChart></AppointmentChart>
+      </div> : ""}
       <div className="text-center">
         {booking.length === 0 ? (
-          <h1 className="text-3xl font-thin pt-12">
-            You Have Not Booked Any Appointment Yet
-          </h1>
+          <h1 className="text-3xl font-thin pt-12">You Haven’t Booked Yet</h1>
         ) : (
           <h1 className="text-3xl font-thin pt-12">My Today Appointments</h1>
         )}

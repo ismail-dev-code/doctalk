@@ -3,6 +3,7 @@ import { Link, useLoaderData, useParams } from "react-router";
 import { CiSquareInfo } from "react-icons/ci";
 import { FaRegRegistered } from "react-icons/fa";
 import  { BookingContext } from "../../context/BookingContext";
+import { toast, ToastContainer } from "react-toastify";
 
 const DoctorDetails = () => {
   const data = useLoaderData();
@@ -28,7 +29,8 @@ const DoctorDetails = () => {
   const {booking, setBooking } = useContext(BookingContext);
  
   const handleBooking = (sg) => {
-        setBooking([...booking, sg]);
+    setBooking([...booking, sg]);
+    toast.success(`${sg.name} added successfully`);
   };
 
   return (
