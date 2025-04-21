@@ -7,7 +7,9 @@
     "speciality": "Internal Medicine",
     "experience": "12 years",
     "registrationNumber": "BMDC-101234",
-    "available": true
+    "workingAt": "Medilife Hospital",
+    "consultationFee": "2551",
+    "availableDays": ["Sunday", "Tuesday", "Thursday"]
   },
   {
     "id": 2,
@@ -17,7 +19,9 @@
     "speciality": "Gynecology",
     "experience": "10 years",
     "registrationNumber": "BMDC-102345",
-    "available": true
+    "workingAt": "City Care Hospital",
+    "consultationFee": "3501",
+    "availableDays": ["Monday", "Wednesday", "Saturday"]
   },
   {
     "id": 3,
@@ -27,7 +31,9 @@
     "speciality": "Cardiology",
     "experience": "15 years",
     "registrationNumber": "BMDC-103456",
-    "available": true
+    "workingAt": "Heart Beat Clinic",
+    "consultationFee": "4501",
+    "availableDays": ["Sunday", "Wednesday"]
   },
   {
     "id": 4,
@@ -37,7 +43,9 @@
     "speciality": "Dermatology",
     "experience": "9 years",
     "registrationNumber": "BMDC-104567",
-    "available": true
+    "workingAt": "SkinCare Hospital",
+    "consultationFee": "2521",
+    "availableDays": ["Tuesday", "Friday"]
   },
   {
     "id": 5,
@@ -47,7 +55,9 @@
     "speciality": "Orthopedic Surgery",
     "experience": "11 years",
     "registrationNumber": "BMDC-105678",
-    "available": true
+    "workingAt": "OrthoMed Clinic",
+    "consultationFee": "2581",
+    "availableDays": ["Monday", "Thursday", "Saturday"]
   },
   {
     "id": 6,
@@ -57,7 +67,9 @@
     "speciality": "Pediatrics",
     "experience": "8 years",
     "registrationNumber": "BMDC-106789",
-    "available": true
+    "workingAt": "Child Care Center",
+    "consultationFee": "2501",
+    "availableDays": ["Sunday", "Tuesday"]
   },
   {
     "id": 7,
@@ -67,7 +79,9 @@
     "speciality": "Neurology",
     "experience": "14 years",
     "registrationNumber": "BMDC-107890",
-    "available": true
+    "workingAt": "Neuro Plus Hospital",
+    "consultationFee": "3551",
+    "availableDays": ["Monday", "Thursday"]
   },
   {
     "id": 8,
@@ -77,7 +91,9 @@
     "speciality": "ENT Specialist",
     "experience": "10 years",
     "registrationNumber": "BMDC-108901",
-    "available": true
+    "workingAt": "Better Ear Clinic",
+    "consultationFee": "2561",
+    "availableDays": ["Wednesday", "Friday"]
   },
   {
     "id": 9,
@@ -87,7 +103,9 @@
     "speciality": "Psychiatry",
     "experience": "7 years",
     "registrationNumber": "BMDC-109012",
-    "available": true
+    "workingAt": "Mind Health Center",
+    "consultationFee": "3521",
+    "availableDays": ["Tuesday", "Thursday"]
   },
   {
     "id": 10,
@@ -97,7 +115,9 @@
     "speciality": "Radiology",
     "experience": "6 years",
     "registrationNumber": "BMDC-110123",
-    "available": true
+    "workingAt": "RayView Hospital",
+    "consultationFee": "2591",
+    "availableDays": ["Monday", "Friday"]
   },
   {
     "id": 11,
@@ -107,7 +127,9 @@
     "speciality": "Urology",
     "experience": "13 years",
     "registrationNumber": "BMDC-111234",
-    "available": true
+    "workingAt": "UroLife Hospital",
+    "consultationFee": "3541",
+    "availableDays": ["Sunday", "Wednesday", "Friday"]
   },
   {
     "id": 12,
@@ -117,6 +139,8 @@
     "speciality": "Eye Specialist",
     "experience": "10 years",
     "registrationNumber": "BMDC-112345",
-    "available": true
+    "workingAt": "Vision Care Hospital",
+    "consultationFee": "2541",
+    "availableDays": ["Tuesday", "Thursday"]
   }
 ]
