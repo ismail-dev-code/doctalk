@@ -4,6 +4,7 @@ import Blogs from "../components/pages/Blogs";
 import Booking from "../components/pages/Booking";
 import Home from "../components/pages/Home";
 import ErrorPage from "../components/pages/ErrorPage";
+import DoctorDetails from "../components/doctors/DoctorDetails";
 
 
 export const router = createBrowserRouter([
@@ -30,6 +31,16 @@ export const router = createBrowserRouter([
         path: "/booking",
         Component: Booking,
       },
+      {
+        path: '/doctor-details/:name',
+        hydrateFallbackElement: <div><span className="loading loading-dots loading-xs"></span>
+        <span className="loading loading-dots loading-sm"></span>
+        <span className="loading loading-dots loading-md"></span>
+        <span className="loading loading-dots loading-lg"></span>
+        <span className="loading loading-dots loading-xl"></span></div>,
+        loader: ()=> fetch('../doctors-data.json'),
+        Component: DoctorDetails,
+      }
     ],
   },
 ]);

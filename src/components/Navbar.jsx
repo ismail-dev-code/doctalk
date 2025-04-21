@@ -47,7 +47,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <img className="w-6 h-6" src={logoImg} alt="logoImg" />
+        <img className="w-6 h-6 mr-1.5" src={logoImg} alt="logoImg" />
         <Link to="/" className="font-bold text-xl">
           DocTalk
         </Link>

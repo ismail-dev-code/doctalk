@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../ui/Button";
+import { Link } from "react-router";
 
 const Doctor = ({ doctor }) => {
   const {
@@ -26,8 +27,9 @@ const Doctor = ({ doctor }) => {
             <h2 className="border-b-2 border-dashed border-gray-300 text-gray-600 pb-3">{education}</h2>
             <p className="py-3 text-gray-600">Reg No: {registrationNumber}</p>
            </div>
-          <div className="text-center pb-4">
-          <Button label='View Details'/>
+          <div className="text-center pb-4 ">
+         <Link to={`/doctor-details/${name}`}>
+         <Button label='View Details'/></Link>
           </div>
         </div>
     </div>

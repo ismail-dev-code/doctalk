@@ -18,7 +18,7 @@ const Banner = () => {
       <form className="flex flex-col md:flex-row justify-center items-center mb-4 md:px-24">
         <input
           placeholder="Search any doctor.. "
-          className="bg-white lg:text-base text-xs border border-gray-300 rounded-4xl shadow-md w-2/3 h-12 px-4 mb-3 focus:outline-none focus:shadow-outline md:mr-2 md:mb-0"
+          className="bg-white lg:text-base text-xs border border-gray-300 rounded-4xl shadow-md w-2/3 h-11 px-4 mb-3 focus:outline-none focus:shadow-outline md:mr-2 md:mb-0"
         />
 
         <Button type="submit" label="Search Now" />
