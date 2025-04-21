@@ -1,7 +1,8 @@
-import React from "react";
-import { useLoaderData, useParams } from "react-router";
+import React, { useContext } from "react";
+import { Link, useLoaderData, useParams } from "react-router";
 import { CiSquareInfo } from "react-icons/ci";
 import { FaRegRegistered } from "react-icons/fa";
+import  { BookingContext } from "../../context/BookingContext";
 
 const DoctorDetails = () => {
   const data = useLoaderData();
@@ -23,6 +24,12 @@ const DoctorDetails = () => {
   const isAvailable = singleData.availableDays.find(
     (available) => available === todayName
   );
+
+  const {booking, setBooking } = useContext(BookingContext);
+ 
+  const handleBooking = (sg) => {
+        setBooking([...booking, sg]);
+  };
 
   return (
     <div className="pb-8">
@@ -59,7 +66,7 @@ const DoctorDetails = () => {
           <h3 className="mb-3">
             <span className="font-bold mr-3.5">Availability </span>{" "}
             {singleData.availableDays.map((day) => (
-              <span className="text-green-500 text-xs border rounded-full py-1 px-2 bg-green-50 cursor-pointer mr-2">
+              <span key={day} className="text-green-500 text-xs border rounded-full py-1 px-2 bg-green-50 cursor-pointer mr-2">
                 {day}
               </span>
             ))}
@@ -96,7 +103,9 @@ const DoctorDetails = () => {
             Due to high patient volume, we are currently accepting appointments
             for today only. We appreciate your understanding and cooperation.
           </p>
+          <Link to="/booking">
           <button
+            onClick={() => handleBooking(singleData)}
             disabled={!isAvailable}
             className={`py-2 rounded-full text-white text-center text-lg w-full mt-12 
     ${
@@ -107,6 +116,7 @@ const DoctorDetails = () => {
           >
             Book Appointment Now
           </button>
+          </Link>
         </div>
       </div>
     </div>

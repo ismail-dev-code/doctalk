@@ -5,10 +5,10 @@
     "name": "Dr. Ahmed Bhuiyan",
     "education": "MBBS, FCPS (Medicine)",
     "speciality": "Internal Medicine",
-    "experience": "12 years",
+    "experience": "22 years",
     "registrationNumber": "BMDC-101234",
     "workingAt": "Medilife Hospital",
-    "consultationFee": "2551",
+    "consultationFee": "1,100",
     "availableDays": ["Sunday", "Tuesday", "Thursday"]
   },
   {
@@ -17,10 +17,10 @@
     "name": "Dr. Bilkis Khatun",
     "education": "MBBS, MS (Gynae & Obs)",
     "speciality": "Gynecology",
-    "experience": "10 years",
+    "experience": "11 years",
     "registrationNumber": "BMDC-102345",
     "workingAt": "City Care Hospital",
-    "consultationFee": "3501",
+    "consultationFee": "950",
     "availableDays": ["Monday", "Wednesday", "Saturday"]
   },
   {
@@ -29,10 +29,10 @@
     "name": "Dr. Mahbul Hoque",
     "education": "MBBS, MD (Cardiology)",
     "speciality": "Cardiology",
-    "experience": "15 years",
+    "experience": "25 years",
     "registrationNumber": "BMDC-103456",
     "workingAt": "Heart Beat Clinic",
-    "consultationFee": "4501",
+    "consultationFee": "1,200",
     "availableDays": ["Sunday", "Wednesday"]
   },
   {
@@ -44,7 +44,7 @@
     "experience": "9 years",
     "registrationNumber": "BMDC-104567",
     "workingAt": "SkinCare Hospital",
-    "consultationFee": "2521",
+    "consultationFee": "950",
     "availableDays": ["Tuesday", "Friday"]
   },
   {
@@ -53,10 +53,10 @@
     "name": "Dr. Salim Bhuiyan",
     "education": "MBBS, MS (Orthopedics)",
     "speciality": "Orthopedic Surgery",
-    "experience": "11 years",
+    "experience": "19 years",
     "registrationNumber": "BMDC-105678",
     "workingAt": "OrthoMed Clinic",
-    "consultationFee": "2581",
+    "consultationFee": "1000",
     "availableDays": ["Monday", "Thursday", "Saturday"]
   },
   {
@@ -65,10 +65,10 @@
     "name": "Dr. Yeasin Shamim",
     "education": "MBBS, FCPS (Pediatrics)",
     "speciality": "Pediatrics",
-    "experience": "8 years",
+    "experience": "12 years",
     "registrationNumber": "BMDC-106789",
     "workingAt": "Child Care Center",
-    "consultationFee": "2501",
+    "consultationFee": "900",
     "availableDays": ["Sunday", "Tuesday"]
   },
   {
@@ -80,7 +80,7 @@
     "experience": "14 years",
     "registrationNumber": "BMDC-107890",
     "workingAt": "Neuro Plus Hospital",
-    "consultationFee": "3551",
+    "consultationFee": "850",
     "availableDays": ["Monday", "Thursday"]
   },
   {
@@ -92,7 +92,7 @@
     "experience": "10 years",
     "registrationNumber": "BMDC-108901",
     "workingAt": "Better Ear Clinic",
-    "consultationFee": "2561",
+    "consultationFee": "1000",
     "availableDays": ["Wednesday", "Friday"]
   },
   {
@@ -104,7 +104,7 @@
     "experience": "7 years",
     "registrationNumber": "BMDC-109012",
     "workingAt": "Mind Health Center",
-    "consultationFee": "3521",
+    "consultationFee": "950",
     "availableDays": ["Tuesday", "Thursday"]
   },
   {
@@ -116,7 +116,7 @@
     "experience": "6 years",
     "registrationNumber": "BMDC-110123",
     "workingAt": "RayView Hospital",
-    "consultationFee": "2591",
+    "consultationFee": "850",
     "availableDays": ["Monday", "Friday"]
   },
   {
@@ -125,10 +125,10 @@
     "name": "Dr. Abul Haque",
     "education": "MBBS, MS (Urology)",
     "speciality": "Urology",
-    "experience": "13 years",
+    "experience": "23 years",
     "registrationNumber": "BMDC-111234",
     "workingAt": "UroLife Hospital",
-    "consultationFee": "3541",
+    "consultationFee": "1,200",
     "availableDays": ["Sunday", "Wednesday", "Friday"]
   },
   {
@@ -140,7 +140,7 @@
     "experience": "10 years",
     "registrationNumber": "BMDC-112345",
     "workingAt": "Vision Care Hospital",
-    "consultationFee": "2541",
+    "consultationFee": "1,300",
     "availableDays": ["Tuesday", "Thursday"]
   }
 ]

@@ -28,7 +28,7 @@ const Doctors = () => {
         </p>
       </div>
       <div className="grid md:grid-cols-3 gap-4 grid-cols-1">
-        {displayDoctors.map((doctor) => (
+        {displayDoctors?.map((doctor) => (
           <Doctor key={doctor.id} doctor={doctor} />
         ))}
       </div>
