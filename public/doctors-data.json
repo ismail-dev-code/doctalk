@@ -85,7 +85,7 @@
   },
   {
     "id": 8,
-    "doctorImage": "../src/assets/doctor-sample.png",
+    "doctorImage": "https://i.ibb.co.com/Pzg4XdVn/woman-doctor1.jpg",
     "name": "Dr. Nusrat Jahan Shudha",
     "education": "MBBS, MS (ENT)",
     "speciality": "ENT Specialist",
