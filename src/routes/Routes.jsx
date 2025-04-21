@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
         <span className="loading loading-dots loading-md"></span>
         <span className="loading loading-dots loading-lg"></span>
         <span className="loading loading-dots loading-xl"></span></div>,
-        loader:()=>fetch('../../public/blogs.json'),
+        loader:()=>fetch('../public/blogs.json'),
         Component: Blogs,
       },
       {
