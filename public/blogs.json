@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "question": "What is useState and how does it work in React?",
+      "answer": "useState is a Hook in React that lets you add state to functional components. It returns an array with two elements: the current state value and a function to update it. When you call the update function, React re-renders the component to reflect the new state.",
+      "date": "2025-04-10"
+    },
+    {
+      "id": 2,
+      "question": "What is the purpose of useEffect in React?",
+      "answer": "useEffect is a Hook used to handle side effects in React functional components, such as data fetching, DOM manipulation, and setting up subscriptions. It runs after the component renders and can be configured to run based on specific dependencies.",
+      "date": "2025-04-12"
+    },
+    {
+      "id": 3,
+      "question": "What is a custom hook in React and when should you use one?",
+      "answer": "A custom hook is a JavaScript function that starts with 'use' and can call other hooks. It allows you to extract and reuse logic across components. Use custom hooks when you find yourself using the same logic in multiple components, like fetching data or handling forms.",
+      "date": "2025-04-14"
+    },
+    {
+      "id": 4,
+      "question": "Difference between controlled and uncontrolled components? Which one is better?",
+      "answer": "Controlled components are form elements where React controls the state via props. Uncontrolled components manage their own state using refs. Controlled components are usually preferred because they give you more control over the form data, validation, and handling user input.",
+      "date": "2025-04-17"
+    },
+    {
+      "id": 5,
+      "question": "Tell us something about useFormStatus() (explore and explain)",
+      "answer": "useFormStatus() is a hook from React (mostly used with frameworks like Next.js) that helps track the status of form submissions. It gives access to properties like pending, success, or error states of a form, making it useful for handling loading spinners, disabling submit buttons, or showing messages based on submission results.",
+      "date": "2025-04-20"
+    }
+  ]
+  
