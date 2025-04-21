@@ -1,18 +1,20 @@
-import React from 'react';
-import { Outlet } from 'react-router';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import React from "react";
+import { Outlet } from "react-router";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const MainLayOut = () => {
-    return (
-        <>
-            <Navbar></Navbar>
-           <div className='max-w-screen-2xl mx-auto px-8 md:px-12 lg:px-16 xl:px-24'>
-           <Outlet></Outlet>
-           </div>
-            <Footer></Footer>
-            </>
-    );
+  return (
+    <>
+      <Navbar></Navbar>
+      <div className="min-h-[calc(100vh-476px)] bg-[#EFEFEF]">
+        <div className="max-w-screen-2xl mx-auto px-8 md:px-12 lg:px-16 xl:px-24 ">
+          <Outlet></Outlet>
+        </div>
+      </div>
+      <Footer></Footer>
+    </>
+  );
 };
 
 export default MainLayOut;

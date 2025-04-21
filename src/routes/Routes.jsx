@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router";
 import MainLayOut from "../MainLayOut/MainLayOut";
-
 import Blogs from "../components/pages/Blogs";
 import Booking from "../components/pages/Booking";
 import Home from "../components/pages/Home";
@@ -15,7 +14,12 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        
+        hydrateFallbackElement: <div><span className="loading loading-dots loading-xs"></span>
+        <span className="loading loading-dots loading-sm"></span>
+        <span className="loading loading-dots loading-md"></span>
+        <span className="loading loading-dots loading-lg"></span>
+        <span className="loading loading-dots loading-xl"></span></div>,
+        loader: ()=> fetch('./doctors-data.json'),
         Component: Home,
       },
       {

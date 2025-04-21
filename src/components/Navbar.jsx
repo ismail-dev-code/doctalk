@@ -1,10 +1,11 @@
 import React from "react";
 import logoImg from "../assets/logo.png";
 import { Link, NavLink } from "react-router";
+import Button from "./ui/Button";
 
 const Navbar = () => {
   return (
-    <div className="navbar p-0 bg-base-100 shadow-sm px-8 md:px-12 lg:px-16 xl:px-24">
+    <div className="navbar p-0 bg-[#EFEFEF] px-8 md:px-12 lg:px-16 xl:px-24">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} className="cursor-pointer mr-2 lg:hidden">
@@ -88,8 +89,9 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
-        <button className="btn hidden md:block lg:block">Emergency</button>
+      <div className="navbar-end hidden md:flex lg:flex">
+       
+      <Button label='Emergency' />
       </div>
     </div>
   );
