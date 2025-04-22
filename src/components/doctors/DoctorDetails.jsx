@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { Link, useLoaderData, useParams } from "react-router";
+import { Link, useLoaderData, useNavigate, useParams } from "react-router";
 import { CiSquareInfo } from "react-icons/ci";
 import { FaRegRegistered } from "react-icons/fa";
-import  { BookingContext } from "../../context/BookingContext";
-import { toast, ToastContainer } from "react-toastify";
+import { BookingContext } from "../../context/BookingContext";
+import { toast } from "react-toastify";
 
 const DoctorDetails = () => {
   const data = useLoaderData();
@@ -26,11 +26,19 @@ const DoctorDetails = () => {
     (available) => available === todayName
   );
 
-  const {booking, setBooking } = useContext(BookingContext);
- 
+  const { booking, setBooking } = useContext(BookingContext);
+  const navigate = useNavigate();
+
   const handleBooking = (sg) => {
-    setBooking([...booking, sg]);
-    toast.success(`${sg.name} added successfully`);
+    console.log(sg);
+    const isExist = booking.find((exist) => exist.name === sg.name);
+    if (isExist) {
+      toast.error(`${sg.name} has already been added. Please check your list.`);
+    } else {
+      toast.success(`Appointment confirmed with ${sg.name}`);
+      setBooking([...booking, sg]);
+      navigate("/booking");
+    }
   };
 
   return (
@@ -68,7 +76,10 @@ const DoctorDetails = () => {
           <h3 className="mb-3">
             <span className="font-bold mr-3.5">Availability </span>{" "}
             {singleData.availableDays.map((day) => (
-              <span key={day} className="text-green-500 text-xs border rounded-full py-1 px-2 bg-green-50 cursor-pointer mr-2">
+              <span
+                key={day}
+                className="text-green-500 text-xs border rounded-full py-1 px-2 bg-green-50 cursor-pointer mr-2"
+              >
                 {day}
               </span>
             ))}
@@ -105,7 +116,7 @@ const DoctorDetails = () => {
             Due to high patient volume, we are currently accepting appointments
             for today only. We appreciate your understanding and cooperation.
           </p>
-          <Link to="/booking">
+
           <button
             onClick={() => handleBooking(singleData)}
             disabled={!isAvailable}
@@ -118,7 +129,6 @@ const DoctorDetails = () => {
           >
             Book Appointment Now
           </button>
-          </Link>
         </div>
       </div>
     </div>

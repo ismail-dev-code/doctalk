@@ -32,7 +32,7 @@ const Booking = () => {
       </div>
 
       {booking.map((book) => (
-        <Book book={book}></Book>
+        <Book key={book.id} book={book}></Book>
       ))}
     </div>
   );

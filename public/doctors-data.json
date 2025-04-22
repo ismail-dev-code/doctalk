@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "doctorImage": "https://i.ibb.co.com/4Z9sQPcf/woman-doctor8.webp",
-    "name": "Dr. Ahmed Bhuiyan",
+    "doctorImage": "https://i.ibb.co.com/zWf9LSwv/aidoct578391-1280.png",
+    "name": "Dr. Zobaida Roman",
     "education": "MBBS, FCPS (Medicine)",
     "speciality": "Internal Medicine",
-    "experience": "22 years",
+    "experience": "7 years",
     "registrationNumber": "BMDC-101234",
     "workingAt": "Medilife Hospital",
     "consultationFee": "1100",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "doctorImage": "https://i.ibb.co.com/9mBdGqpF/woman-doctor6.jpg",
-    "name": "Dr. Bilkis Khatun",
+    "name": "Dr. Hafiaza Rayes",
     "education": "MBBS, MS (Gynae & Obs)",
     "speciality": "Gynecology",
     "experience": "11 years",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "doctorImage": "https://i.ibb.co.com/vvwkMd13/woman-doctor7.jpg",
-    "name": "Dr. Mahbul Hoque",
+    "name": "Dr. Jahidul Hoque",
     "education": "MBBS, MD (Cardiology)",
     "speciality": "Cardiology",
     "experience": "25 years",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "doctorImage": "https://i.ibb.co.com/DDncs7PQ/woman-doctor5.webp",
-    "name": "Dr. Chokina Begum",
+    "name": "Dr. Rohbita Kajori",
     "education": "MBBS, FCPS (Dermatology)",
     "speciality": "Dermatology",
     "experience": "9 years",
@@ -49,8 +49,8 @@
   },
   {
     "id": 5,
-    "doctorImage": "https://i.ibb.co.com/vvwkMd13/woman-doctor7.jpg",
-    "name": "Dr. Salim Bhuiyan",
+    "doctorImage": "https://i.ibb.co.com/FkxsYBnC/ok.jpg",
+    "name": "Dr. Rizwana Islam",
     "education": "MBBS, MS (Orthopedics)",
     "speciality": "Orthopedic Surgery",
     "experience": "19 years",
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "doctorImage": "https://i.ibb.co.com/nqhLV3hz/woman-doctor2.jpg",
-    "name": "Dr. Yeasin Shamim",
+    "name": "Dr. Elita Rozy",
     "education": "MBBS, FCPS (Pediatrics)",
     "speciality": "Pediatrics",
     "experience": "12 years",
@@ -73,11 +73,11 @@
   },
   {
     "id": 7,
-    "doctorImage": "https://i.ibb.co.com/Pzg4XdVn/woman-doctor1.jpg",
-    "name": "Dr. Jumur Akter",
+    "doctorImage": "https://i.ibb.co.com/4Z9sQPcf/woman-doctor8.webp",
+    "name": "Dr. Hasibul Raman",
     "education": "MBBS, MD (Neurology)",
     "speciality": "Neurology",
-    "experience": "14 years",
+    "experience": "24 years",
     "registrationNumber": "BMDC-107890",
     "workingAt": "Neuro Plus Hospital",
     "consultationFee": "850",
@@ -85,8 +85,8 @@
   },
   {
     "id": 8,
-    "doctorImage": "https://i.ibb.co.com/Pzg4XdVn/woman-doctor1.jpg",
-    "name": "Dr. Nusrat Jahan Shudha",
+    "doctorImage": "https://i.ibb.co.com/fdXRcTtK/doctor-sample.png",
+    "name": "Dr. Farja Jahan",
     "education": "MBBS, MS (ENT)",
     "speciality": "ENT Specialist",
     "experience": "10 years",
@@ -121,7 +121,7 @@
   },
   {
     "id": 11,
-    "doctorImage": "https://i.ibb.co.com/Pzg4XdVn/woman-doctor1.jpg",
+    "doctorImage": "https://i.ibb.co.com/Df7638Sd/doctogdh.jpg",
     "name": "Dr. Abul Haque",
     "education": "MBBS, MS (Urology)",
     "speciality": "Urology",
@@ -133,8 +133,8 @@
   },
   {
     "id": 12,
-    "doctorImage": "https://i.ibb.co.com/Pzg4XdVn/woman-doctor1.jpg",
-    "name": "Dr. Morzina Islam",
+    "doctorImage": "https://i.ibb.co.com/7x6SX8x5/yeasin.jpg",
+    "name": "Dr. Morizul Islam",
     "education": "MBBS, FCPS (Ophthalmology)",
     "speciality": "Eye Specialist",
     "experience": "10 years",
