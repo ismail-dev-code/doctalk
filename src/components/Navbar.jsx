@@ -30,21 +30,37 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <NavLink
-                className={({ isActive }) => (isActive ? "text-blue-600" : "")}
-                to="/"
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className={({ isActive }) => (isActive ? "text-blue-600" : "")}
-                to="/blogs"
-              >
-                Blogs
-              </NavLink>
-            </li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "text-blue-600 underline" : "")}
+              to="/"
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "text-blue-600 underline" : "")}
+              to="/booking"
+            >
+              My-Bookings
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "text-blue-600 underline" : "")}
+              to="/blogs"
+            >
+              Blogs
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "text-blue-600 underline" : "")}
+              to="/contact-us"
+            >
+              Contact Us
+            </NavLink>
+          </li>
           </ul>
         </div>
         <img className="w-6 h-6 mr-1.5" src={logoImg} alt="logoImg" />

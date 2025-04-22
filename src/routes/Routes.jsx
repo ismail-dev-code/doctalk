@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
             <span className="loading loading-dots loading-xl"></span>
           </div>
         ),
-        loader: () => fetch("/public/doctors-data.json"),
+        loader: () => fetch("/doctors-data.json"),
         Component: Home,
       },
       {
@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
             <span className="loading loading-dots loading-xl"></span>
           </div>
         ),
-        loader: () => fetch("/public/blogs.json"),
+        loader: () => fetch("/blogs.json"),
         Component: Blogs,
       },
       {
@@ -55,7 +55,7 @@ export const router = createBrowserRouter([
             <span className="loading loading-dots loading-xl"></span>
           </div>
         ),
-        loader: () => fetch("/public/doctors-data.json"),
+        loader: () => fetch("/doctors-data.json"),
         Component: DoctorDetails,
       },
     ],
