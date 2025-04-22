@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 const DoctorDetails = () => {
   const data = useLoaderData();
   const { name } = useParams();
-  const { booking, setBooking } = useContext(BookingContext);
+  const { setBooking } = useContext(BookingContext);
   const navigate = useNavigate();
   const singleData = data.find((doctor) => doctor.name === name);
 
@@ -46,6 +46,7 @@ const DoctorDetails = () => {
   const isAvailable = singleData.availableDays.find(
     (available) => available === todayName
   );
+  const booking = JSON.parse(localStorage.getItem("booking"));
 
   const handleBooking = (sg) => {
     const isExist = booking.find((exist) => exist.name === sg.name);
