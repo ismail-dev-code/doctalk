@@ -1,19 +1,29 @@
-import React, { useContext } from "react";
-import { BookingContext } from "../../context/BookingContext";
+import React, { useContext, useEffect } from "react";
+
 import Book from "./Book";
 import { Link } from "react-router";
 import AppointmentChart from "../chart/Rechart";
+import { BookingContext } from "../../context/BookingContext";
 
 const Booking = () => {
-  const { booking } = useContext(BookingContext);
+  const { booking, setBooking } = useContext(BookingContext);
+
+  const localBooking = JSON.parse(localStorage.getItem("booking"));
+  useEffect(() => {
+    setBooking(booking);
+  }, [booking, localBooking]);
 
   return (
     <div className="pb-10">
-      {booking.length !== 0 ? <div className="rounded-lg shadow-lg bg-white py-10 ">
-        <AppointmentChart></AppointmentChart>
-      </div> : ""}
+      {localBooking.length !== 0 ? (
+        <div className="rounded-lg shadow-lg bg-white py-10 ">
+          <AppointmentChart></AppointmentChart>
+        </div>
+      ) : (
+        ""
+      )}
       <div className="text-center">
-        {booking.length === 0 ? (
+        {localBooking.length === 0 ? (
           <h1 className="text-3xl font-thin pt-12">You Haven’t Booked Yet</h1>
         ) : (
           <h1 className="text-3xl font-thin pt-12">My Today Appointments</h1>
@@ -22,7 +32,7 @@ const Booking = () => {
           View all your scheduled appointments for today in one place. Stay
           organized and never miss a consultation with your doctor.
         </p>
-        {booking.length === 0 ? (
+        {localBooking.length === 0 ? (
           <Link to="/" className="btn mt-4 bg-blue-600 text-white md:mb-16">
             Book An Appointment
           </Link>
@@ -31,7 +41,7 @@ const Booking = () => {
         )}
       </div>
 
-      {booking.map((book) => (
+      {localBooking.map((book) => (
         <Book key={book.id} book={book}></Book>
       ))}
     </div>

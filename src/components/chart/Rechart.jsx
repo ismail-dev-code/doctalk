@@ -1,6 +1,6 @@
-import { useContext } from "react";
+
 import { BarChart, Bar, XAxis, YAxis, Cell, CartesianGrid } from "recharts";
-import { BookingContext } from "../../context/BookingContext";
+
 
 const getPath = (x, y, width, height) =>
   `M${x},${y + height}
@@ -18,7 +18,8 @@ const TriangleBar = (props) => {
 };
 
 const AppointmentChart = () => {
-  const { booking } = useContext(BookingContext);
+  // const { booking } = useContext(BookingContext);
+  const booking = JSON.parse(localStorage.getItem("booking"));
 
   const result = booking.map(({ name, consultationFee }) => ({
     name,

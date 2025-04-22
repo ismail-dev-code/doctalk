@@ -4,11 +4,13 @@ import { toast } from "react-toastify";
 
 const Book = ({ book }) => {
   const { name, education, consultationFee, id } = book;
-  const { booking, setBooking } = useContext(BookingContext);
+  const {setBooking } = useContext(BookingContext);
+  const booking = JSON.parse(localStorage.getItem("booking"));
   const handleCancelBooking = (id) => {
     toast.error(`You've Cancelled the appointment with ${name}.`);
     const result = booking.filter((bk) => bk.id !== id);
-    setBooking(result);
+    setBooking(result); 
+    localStorage.setItem("booking", JSON.stringify(result) );
   };
   return (
     <div className="bg-white rounded-2xl py-4 px-5 mt-5">

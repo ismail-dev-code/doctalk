@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useLoaderData, useNavigate, useParams } from "react-router";
+import { useLoaderData, useNavigate, useParams } from "react-router";
 import { CiSquareInfo } from "react-icons/ci";
 import { FaRegRegistered } from "react-icons/fa";
 import { BookingContext } from "../../context/BookingContext";
@@ -8,8 +8,29 @@ import { toast } from "react-toastify";
 const DoctorDetails = () => {
   const data = useLoaderData();
   const { name } = useParams();
+  const { booking, setBooking } = useContext(BookingContext);
+  const navigate = useNavigate();
   const singleData = data.find((doctor) => doctor.name === name);
 
+  if (!singleData) {
+    return (
+      <div className=" flex items-center justify-center text-center p-4">
+        <div className="w-full bg-white">
+          <h1 className="text-2xl pt-8 font-semibold mb-2">Doctor Not Found</h1>
+          <p className="text-gray-500 text-sm">
+            Sorry, we couldn't find a doctor with that name. Please check the
+            name and try again.
+          </p>
+          <button
+            onClick={() => navigate("/")}
+            className="btn mt-4 bg-blue-600 text-white md:mb-16"
+          >
+            Go to Home
+          </button>
+        </div>
+      </div>
+    );
+  }
   const today = new Date();
   const day = today.getDay();
   const days = [
@@ -26,11 +47,7 @@ const DoctorDetails = () => {
     (available) => available === todayName
   );
 
-  const { booking, setBooking } = useContext(BookingContext);
-  const navigate = useNavigate();
-
   const handleBooking = (sg) => {
-    console.log(sg);
     const isExist = booking.find((exist) => exist.name === sg.name);
     if (isExist) {
       toast.error(`${sg.name} has already been added. Please check your list.`);
@@ -38,6 +55,7 @@ const DoctorDetails = () => {
       toast.success(`Appointment confirmed with ${sg.name}`);
       setBooking([...booking, sg]);
       navigate("/booking");
+      localStorage.setItem("booking", JSON.stringify([...booking, sg]));
     }
   };
 
