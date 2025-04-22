@@ -15,9 +15,9 @@ const DoctorDetails = () => {
   if (!singleData) {
     return (
       <div className=" flex items-center justify-center text-center p-4">
-        <div className="w-full bg-white">
+        <div className="w-full bg-white rounded-2xl shadow-lg">
           <h1 className="text-2xl pt-8 font-semibold mb-2">Doctor Not Found</h1>
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 text-sm mb-8">
             Sorry, we couldn't find a doctor with that name. Please check the
             name and try again.
           </p>
@@ -130,7 +130,7 @@ const DoctorDetails = () => {
           </h2>
         </div>
         <div className="text-center">
-          <p className="text-orange-400 md:text-base text-xs border rounded-full py-1 px-2 bg-orange-50 cursor-pointer flex items-center gap-3">
+          <p className="text-orange-400 md:text-base text-xs border md:rounded-full rounded-xl py-1 px-2 bg-orange-50 cursor-pointer flex items-center md:gap-3 gap-0">
             <CiSquareInfo className="rounded-full" />
             Due to high patient volume, we are currently accepting appointments
             for today only. We appreciate your understanding and cooperation.

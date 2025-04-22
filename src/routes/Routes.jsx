@@ -6,31 +6,38 @@ import Home from "../components/pages/Home";
 import ErrorPage from "../components/pages/ErrorPage";
 import DoctorDetails from "../components/doctors/DoctorDetails";
 
-
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: MainLayOut,
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
-        hydrateFallbackElement: <div className="text-center"><span className="loading loading-dots loading-xs"></span>
-        <span className="loading loading-dots loading-sm"></span>
-        <span className="loading loading-dots loading-md"></span>
-        <span className="loading loading-dots loading-lg"></span>
-        <span className="loading loading-dots loading-xl"></span></div>,
-        loader: ()=> fetch('./doctors-data.json'),
+        hydrateFallbackElement: (
+          <div className="text-center">
+            <span className="loading loading-dots loading-xs"></span>
+            <span className="loading loading-dots loading-sm"></span>
+            <span className="loading loading-dots loading-md"></span>
+            <span className="loading loading-dots loading-lg"></span>
+            <span className="loading loading-dots loading-xl"></span>
+          </div>
+        ),
+        loader: () => fetch("/public/doctors-data.json"),
         Component: Home,
       },
       {
         path: "/blogs",
-        hydrateFallbackElement: <div className="text-center"><span className="loading loading-dots loading-xs"></span>
-        <span className="loading loading-dots loading-sm"></span>
-        <span className="loading loading-dots loading-md"></span>
-        <span className="loading loading-dots loading-lg"></span>
-        <span className="loading loading-dots loading-xl"></span></div>,
-        loader:()=>fetch('./blogs.json'),
+        hydrateFallbackElement: (
+          <div className="text-center">
+            <span className="loading loading-dots loading-xs"></span>
+            <span className="loading loading-dots loading-sm"></span>
+            <span className="loading loading-dots loading-md"></span>
+            <span className="loading loading-dots loading-lg"></span>
+            <span className="loading loading-dots loading-xl"></span>
+          </div>
+        ),
+        loader: () => fetch("/public/blogs.json"),
         Component: Blogs,
       },
       {
@@ -38,15 +45,19 @@ export const router = createBrowserRouter([
         Component: Booking,
       },
       {
-        path: '/doctor-details/:name',
-        hydrateFallbackElement: <div className="text-center"><span className="loading loading-dots loading-xs"></span>
-        <span className="loading loading-dots loading-sm"></span>
-        <span className="loading loading-dots loading-md"></span>
-        <span className="loading loading-dots loading-lg"></span>
-        <span className="loading loading-dots loading-xl"></span></div>,
-        loader: ()=> fetch('../doctors-data.json'),
+        path: "/doctor-details/:name",
+        hydrateFallbackElement: (
+          <div className="text-center">
+            <span className="loading loading-dots loading-xs"></span>
+            <span className="loading loading-dots loading-sm"></span>
+            <span className="loading loading-dots loading-md"></span>
+            <span className="loading loading-dots loading-lg"></span>
+            <span className="loading loading-dots loading-xl"></span>
+          </div>
+        ),
+        loader: () => fetch("/public/doctors-data.json"),
         Component: DoctorDetails,
-      }
+      },
     ],
   },
 ]);
