@@ -62,11 +62,11 @@ const DoctorDetails = () => {
 
   return (
     <div className="pb-8">
-      <div className="bg-white text-center mb-6 md:py-16 rounded-3xl">
-        <h1 className="text-4xl font-semibold mb-2">
+      <div className="bg-white text-center mb-3 md:mb-6 py-8 md:py-16 rounded-3xl">
+        <h1 className="md:text-4xl text-xl font-semibold mb-2">
           Doctor’s Profile Details
         </h1>
-        <p className="text-gray-500 w-2/3 mx-auto">
+        <p className="text-gray-500 text-xs md:text-base  w-full md:w-2/3 mx-auto">
           Discover expert doctors with verified credentials, specialties, and
           experience — all in one place. View their detailed profiles and find
           the right healthcare professional for your needs.
@@ -114,7 +114,7 @@ const DoctorDetails = () => {
         </div>
       </div>
       <div className="md:mb-5 mb-2 bg-white rounded-3xl py-3 px-2 md:py-8 md:px-6">
-        <h1 className="text-center font-bold text-2xl border-b-2 border-gray-100 pb-3">
+        <h1 className="text-center font-bold text-xl md:text-2xl border-b-2 border-gray-100 pb-1.5 md:pb-3">
           Book an Appointment
         </h1>
         <div className="flex justify-between w-full py-5 border-b-2 border-dashed border-gray-200 mb-5">
@@ -130,7 +130,7 @@ const DoctorDetails = () => {
           </h2>
         </div>
         <div className="text-center">
-          <p className="text-orange-400 text-base border rounded-full py-1 px-2 bg-orange-50 cursor-pointer flex items-center gap-3">
+          <p className="text-orange-400 md:text-base text-xs border rounded-full py-1 px-2 bg-orange-50 cursor-pointer flex items-center gap-3">
             <CiSquareInfo className="rounded-full" />
             Due to high patient volume, we are currently accepting appointments
             for today only. We appreciate your understanding and cooperation.

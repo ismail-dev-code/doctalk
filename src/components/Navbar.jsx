@@ -5,7 +5,7 @@ import Button from "./ui/Button";
 
 const Navbar = () => {
   return (
-    <div className="navbar p-0 bg-[#EFEFEF] px-8 md:px-12 lg:px-16 xl:px-24">
+    <div className="navbar p-0 bg-[#EFEFEF] px-4 md:px-12 lg:px-16 xl:px-24">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} className="cursor-pointer mr-2 lg:hidden">
@@ -89,7 +89,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end hidden md:flex lg:flex">
+      <div className="navbar-end">
        
       <Button label='Emergency' />
       </div>

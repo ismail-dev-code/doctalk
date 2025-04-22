@@ -1,4 +1,4 @@
 ## DocTalk
 
 
-[Live Demo](https://doctalk-ismail.netlify.app/)
+[Live Demo](https://doc-talk-ismail.netlify.app/)

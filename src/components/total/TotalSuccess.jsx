@@ -15,7 +15,7 @@ const total = () => {
         Experience top-quality healthcare with our expert doctors and advanced
         medical facilities.
       </p>
-      <div className="grid md:grid-cols-4 grid-cols-1 md:gap-3 gap-1.5 items-center justify-items-center">
+      <div className="grid md:grid-cols-4 grid-cols-2 md:gap-3 gap-2 items-center justify-items-center">
         <div className="bg-white flex flex-col justify-start rounded-md p-6">
           <img className="w-10 h-10" src={doctorImg} alt="doctor Img" />
           <h1 className="text-3xl font-bold py-1.5">

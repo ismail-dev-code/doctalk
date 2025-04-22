@@ -38,11 +38,11 @@ const Doctor = ({ doctor }) => {
         />
       </div>
       <div className="card-details">
-        <div className="flex gap-4 px-6">
-          <p className="text-green-500 text-xs border rounded-full py-1 px-2 bg-green-50 cursor-pointer">
+        <div className="flex md:gap-4 gap-2 justify-center items-center px-2 md:px-6">
+          <p className="text-green-500 text-xs border rounded-full md:py-1 py-0 mt-2 md:mt-0 md:px-2 px-1 bg-green-50 cursor-pointer">
             {isAvailable ? "Available" : "Not Available"}
           </p>
-          <p className="text-blue-500 text-xs border rounded-full py-1 px-2 bg-green-50 cursor-pointer">
+          <p className="text-blue-500 text-xs border rounded-full md:py-1 py-0 md:px-2 px-1 bg-green-50 cursor-pointer">
             {experience}+ Experience
           </p>
         </div>

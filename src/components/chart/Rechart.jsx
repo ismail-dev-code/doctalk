@@ -1,6 +1,13 @@
-
-import { BarChart, Bar, XAxis, YAxis, Cell, CartesianGrid } from "recharts";
-
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Cell,
+  CartesianGrid,
+  ResponsiveContainer,
+} from "recharts";
+import { useState, useEffect } from "react";
 
 const getPath = (x, y, width, height) =>
   `M${x},${y + height}
@@ -18,29 +25,58 @@ const TriangleBar = (props) => {
 };
 
 const AppointmentChart = () => {
-  // const { booking } = useContext(BookingContext);
-  const booking = JSON.parse(localStorage.getItem("booking"));
+  const [isMobile, setIsMobile] = useState(false);
 
-  const result = booking.map(({ name, consultationFee }) => ({
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768); // Tailwind 'md' breakpoint
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  const booking = JSON.parse(localStorage.getItem("booking")) || [];
+
+  const data = booking.map(({ name, consultationFee }) => ({
     name,
     uv: Number(consultationFee),
   }));
 
-  const data = result;
-
-  const colors = ["#8884d8", "#82ca9d", "#ffc658", "#ff6f91", "#00c49f", "#ffbb28"];
+  const colors = [
+    "#8884d8",
+    "#82ca9d",
+    "#ffc658",
+    "#ff6f91",
+    "#00c49f",
+    "#ffbb28",
+  ];
 
   return (
-    <BarChart width={600} height={300} data={data}>
-      <XAxis dataKey="name" />
-      <YAxis />
-      <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-      <Bar dataKey="uv" shape={<TriangleBar />}>
-        {data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
-        ))}
-      </Bar>
-    </BarChart>
+    <div className="w-full h-[300px]">
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart data={data}>
+          <XAxis
+            dataKey="name"
+            interval={0}
+            angle={isMobile ? -10 : 0}
+            dy={isMobile ? 10 : 0}
+            tick={{ fontSize: 12 }}
+          />
+          <YAxis />
+          <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+          <Bar dataKey="uv" shape={<TriangleBar />}>
+            {data.map((entry, index) => (
+              <Cell
+                key={`cell-${index}`}
+                fill={colors[index % colors.length]}
+              />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
   );
 };
 
