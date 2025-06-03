@@ -20,17 +20,19 @@
 
 ## 📁 Project Structure
 
-doctalk-project/
-├── public/
-├── src/
-│ ├── components/
-│ ├── pages/
-│ ├── routes/
-│ └── main.jsx
-├── index.html
-├── tailwind.config.js
-├── vite.config.js
-└── package.json
+- doctalk-project/
+  - public/
+  - src/
+    - components/
+    - pages/
+    - routes/
+    - assets/
+    - main.jsx
+  - .eslintrc.js
+  - tailwind.config.js
+  - vite.config.js
+  - package.json
+
 
 
 ## 📦 Installation
